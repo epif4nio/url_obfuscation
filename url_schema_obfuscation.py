@@ -22,7 +22,7 @@ ip_parts = real_ip_addr.split(".")
 binary_string = ""
 
 for part in ip_parts:
-    binary_string += "{0:b}".format(int(part))
+    binary_string += "{0:08b}".format(int(part))
 
 print(URL_TEMPLATE.format(username_part, int(binary_string, 2)))
 
